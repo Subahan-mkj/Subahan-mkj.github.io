@@ -36,9 +36,11 @@ function prevSlide1(){
 // PROJECT 2
 
 const project2Images = [
-  "images/project2-1.png",
-  "images/project2-2.png",
-  "images/project2-3.png"
+  "images/project2-1.jpeg",
+  "images/project2-2.jpeg",
+  "images/project2-3.jpeg",
+  "images/project2-4,jpeg",
+  "images/project2-5,jpeg"
 ];
 
 let current2 = 0;
