@@ -84,26 +84,36 @@ body {
     margin-bottom: 10px;
 }
 
-.project-card p {
-    color: gray;
+.project-card {
+    background: #111;
+    padding: 40px;
+    border-radius: 25px;
+    margin-bottom: 50px;
+    text-align: center;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 20px rgba(255,255,255,0.05);
 }
-
 /* PROJECT SLIDER */
 
 .project-slider {
     position: relative;
-    width: 320px;
-    margin: auto;
+    width: 100%;
+    max-width: 500px;
+    margin: 25px auto;
     overflow: hidden;
-    border-radius: 12px;
+    border-radius: 18px;
+    background: #1a1a1a;
+    padding: 10px;
 }
 
 .slide {
     display: none;
     width: 100%;
-    height: 220px;
+    height: 280px;
     object-fit: cover;
-    border-radius: 12px;
+    border-radius: 15px;
 }
 
 .slide.active {
@@ -115,21 +125,29 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 8px 12px;
+    width: 38px;
+    height: 38px;
     cursor: pointer;
     border-radius: 50%;
-    font-size: 16px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.prev:hover,
+.next:hover {
+    background: cyan;
+    color: black;
 }
 
 .prev {
-    left: 10px;
+    left: 20px;
 }
 
 .next {
-    right: 10px;
+    right: 20px;
 }
 
 /* MEDIA */
