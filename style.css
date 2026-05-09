@@ -115,12 +115,12 @@ section { padding: 100px 80px; }
 .project-grid {
     display: grid;
     grid-template-columns: repeat(align-items center);
-    height: 500px;
     gap: 35px;
 }
 
 .project-card {
     padding: 25px;
+    height: 500px;
 }
 
 .project-slider {
