@@ -1,140 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subahan Portfolio</title>
-
+    <title>Subahan J | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
+    <nav class="navbar">
+        <div class="logo">SJ</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#media">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-        <div class="hero-content">
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="hero-content">
+                <h3 class="badge">Frontend Developer & UI Designer</h3>
+                <h1>SUBAHAN J</h1>
+                <p>Passionate IT student focused on building modern, responsive, and user-friendly websites.</p>
+                <a href="#projects" class="btn">View Projects</a>
+            </div>
+            <div class="hero-image">
+                <div class="image-glow"></div>
+                <img src="images/profile.png" alt="Subahan J Profile">
+            </div>
+        </section>
 
-            <h3>Frontend Developer & UI Designer</h3>
+        <!-- ABOUT -->
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <div class="glass-card">
+                <p>I specialize in frontend development, UI/UX design, responsive websites, and AI-powered systems.</p>
+            </div>
+        </section>
 
-            <h1>SUBAHAN J</h1>
+        <!-- PROJECTS -->
+        <section id="projects" class="projects">
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
+                
+                <!-- Project Card 1 -->
+                <div class="project-card glass-card">
+                    <div class="project-slider">
+                        <button class="prev" onclick="changeSlide(-1, 0)">❮</button>
+                        <img class="slide active project0" src="images/project1-1.png">
+                        <img class="slide project0" src="images/project1-2.png">
+                        <img class="slide project0" src="images/project1-3.png">
+                        <img class="slide project0" src="images/project1-4.png">
+                        <img class="slide project0" src="images/project1-5.png">
+                        <button class="next" onclick="changeSlide(1, 0)">❯</button>
+                    </div>
+                    <h3>Smart Print AI</h3>
+                    <p>AI-powered printing management system.</p>
+                </div>
 
-            <p>
-                Passionate IT student focused on building modern,
-                responsive, and user-friendly websites.
-            </p>
-
-            <a href="#projects" class="btn">
-                View Projects
-            </a>
-
-        </div>
-
-        <div class="hero-image">
-            <img src="images/profile.png" alt="Profile">
-        </div>
-
-    </section>
-
-    <!-- ABOUT -->
-    <section class="about">
-
-        <h2>About Me</h2>
-
-        <p>
-            I specialize in frontend development,
-            UI/UX design, responsive websites,
-            and AI-powered systems.
-        </p>
-
-    </section>
-
-    <!-- PROJECTS -->
-    <section class="projects" id="projects">
-
-        <h2>Projects</h2>
-
-        <!-- PROJECT CARD 1 -->
-        <div class="project-card">
-
-            <div class="project-slider">
-
-                <button class="prev" onclick="changeSlide(-1, 0)">❮</button>
-
-                <img class="slide active project0" src="images/project1-1.png">
-                <img class="slide project0" src="images/project1-2.png">
-                <img class="slide project0" src="images/project1-3.png">
-                <img class="slide project0" src="images/project1-4.png">
-                <img class="slide project0" src="images/project1-5.png">
-
-                <button class="next" onclick="changeSlide(1, 0)">❯</button>
+                <!-- Project Card 2 -->
+                <div class="project-card glass-card">
+                    <div class="project-slider">
+                        <button class="prev" onclick="changeSlide(-1, 1)">❮</button>
+                        <img class="slide active project1" src="images/project2-1.png">
+                        <img class="slide project1" src="images/project2-2.png">
+                        <img class="slide project1" src="images/project2-3.png">
+                        <img class="slide project1" src="images/project2-4.png">
+                        <img class="slide project1" src="images/project2-5.png">
+                        <button class="next" onclick="changeSlide(1, 1)">❯</button>
+                    </div>
+                    <h3>Media Branding</h3>
+                    <p>Creative branding and social media management.</p>
+                </div>
 
             </div>
+        </section>
 
-            <h3>Smart Print AI</h3>
-
-            <p>
-                AI-powered printing and delivery management system.
-            </p>
-
-        </div>
-
-        <!-- PROJECT CARD 2 -->
-        <div class="project-card">
-
-            <div class="project-slider">
-
-                <button class="prev" onclick="changeSlide(-1, 1)">❮</button>
-
-                <img class="slide active project1" src="images/project2-1.png">
-                <img class="slide project1" src="images/project2-2.png">
-                <img class="slide project1" src="images/project2-3.png">
-                <img class="slide project1" src="images/project2-4.png">
-                <img class="slide project1" src="images/project2-5.png">
-
-                <button class="next" onclick="changeSlide(1, 1)">❯</button>
-
+        <!-- MEDIA WORK -->
+        <section id="media" class="media">
+            <h2>Branding Gallery</h2>
+            <div class="media-gallery">
+                <div class="gallery-item"><img src="images/media1.png"></div>
+                <div class="gallery-item"><img src="images/media2.png"></div>
+                <div class="gallery-item"><img src="images/media3.png"></div>
             </div>
+        </section>
 
-            <h3>Media Branding Project</h3>
-
-            <p>
-                Creative branding, poster design, and social media management.
-            </p>
-
-        </div>
-
-    </section>
-
-    <!-- MEDIA WORK -->
-    <section class="media">
-
-        <h2>Media & Branding Works</h2>
-
-        <div class="media-gallery">
-
-            <img src="images/media1.png">
-            <img src="images/media2.png">
-            <img src="images/media3.png">
-
-        </div>
-
-    </section>
-
-    <!-- CONTACT -->
-    <section class="contact">
-
-        <h2>Contact Me</h2>
-
-        <a href="mailto:mkj.subahan66@gmail.com">
-            Email Me
-        </a>
-
-    </section>
+        <!-- CONTACT -->
+        <section id="contact" class="contact">
+            <div class="contact-box glass-card">
+                <h2>Let's Connect</h2>
+                <p>Have a project in mind?</p>
+                <a href="mailto:mkj.subahan66@gmail.com" class="btn">Email Me</a>
+            </div>
+        </section>
+    </main>
 
     <script src="script.js"></script>
-
 </body>
-
 </html>
