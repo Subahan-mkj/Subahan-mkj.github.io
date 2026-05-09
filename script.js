@@ -3,7 +3,9 @@
 const project1Images = [
   "images/project1-1.png",
   "images/project1-2.png",
-  "images/project1-3.png"
+  "images/project1-3.png",
+  "images/project1-4.png",
+  "images/project1-5.png"
 ];
 
 let current1 = 0;
