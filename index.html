@@ -57,46 +57,30 @@
         <h2>Projects</h2>
 
         <!-- PROJECT 1 -->
-        <div class="project-card">
+        <div class="project-slider">
+            <button class="prev" onclick="changeSlide(-1, 0)">❮</button>
 
-            <div class="slider">
+            <img class="slide active project0" src="images/project1-1.png">
+            <img class="slide project0" src="images/project1-2.png">
+            <img class="slide project0" src="images/project1-3.png">
+            <img class="slide project0" src="images/project1-4.png">
+            <img class="slide project0" src="images/project1-5.png">
 
-            <button class="prev" onclick="prevSlide1()">
-                ❮
-            </button>
-
-            <img id="project-image-1" src="images/project1-1.png">
-
-            <button class="next" onclick="nextSlide1()">
-                ❯
-            </button>
-
-            </div>
-
-            <h3>Hospital Management System</h3>
-
-            <p>
-            Appointment scheduling and AI summarization platform.
-            </p>
-
+            <button class="next" onclick="changeSlide(1, 0)">❯</button>
         </div>
 
         <!-- PROJECT 2 -->
-        <div class="project-card">
+        <div class="project-slider">
+            <button class="prev" onclick="changeSlide(-1, 1)">❮</button>
 
-            <div class="slider">
+            <img class="slide active project1" src="images/project2-1.png">
+            <img class="slide project1" src="images/project2-2.png">
+            <img class="slide project1" src="images/project2-3.png">
+            <img class="slide project1" src="images/project2-4.png">
+            <img class="slide project1" src="images/project2-5.png">
 
-            <button class="prev" onclick="prevSlide2()">
-                ❮
-            </button>
-
-            <img id="project-image-2" src="images/project2-1.png">
-
-            <button class="next" onclick="nextSlide2()">
-                ❯
-            </button>
-
-            </div>
+            <button class="next" onclick="changeSlide(1, 1)">❯</button>
+        </div>
 
             <h3>Smart Print AI</h3>
 
