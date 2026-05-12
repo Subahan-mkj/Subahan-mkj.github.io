@@ -72,7 +72,10 @@ section { padding: 100px 80px; }
     padding-top: 10px;
 }
 
-
+.wp{
+    display: flex;
+    padding-left: 100px;
+}
 .badge {
     color: var(--primary);
     text-transform: uppercase;
