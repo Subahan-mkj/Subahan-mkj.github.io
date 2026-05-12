@@ -33,6 +33,32 @@ function startAutoSlide() {
         changeSlide(1, 1);
     }, 4500);
 }
+// CURRENT TIME
+
+function updateTime(){
+
+  const now = new Date();
+
+  const time = now.toLocaleTimeString();
+
+  document.getElementById("time").innerHTML = time;
+}
+
+setInterval(updateTime,1000);
+
+updateTime();
+
+
+// CURRENT LOCATION
+
+fetch("https://ipapi.co/json/")
+.then(response => response.json())
+.then(data => {
+
+  document.getElementById("location").innerHTML =
+    data.city + ", " + data.country_name;
+
+});
 
 // Start auto-sliding when page is ready
 window.onload = startAutoSlide;
