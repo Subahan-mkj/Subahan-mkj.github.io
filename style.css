@@ -22,34 +22,44 @@ body {
 }
 
 /* NAVBAR */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 80px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:25px 60px;
+  background:black;
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 
-.nav-links {
-    display: flex;
-    list-style: none;
-    gap: 30px;
+.logo{
+  font-size:28px;
+  font-weight:bold;
 }
 
-.nav-links a {
-    color: var(--text-main);
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: 0.3s;
+.user-info{
+  display:flex;
+  gap:25px;
+  color:cyan;
+  font-size:14px;
 }
 
-.nav-links a:hover { color: var(--primary); }
+nav ul{
+  display:flex;
+  gap:30px;
+  list-style:none;
+}
 
+nav ul li a{
+  text-decoration:none;
+  color:white;
+  transition:0.3s;
+}
+
+nav ul li a:hover{
+  color:cyan;
+}
 /* SECTIONS */
 section { padding: 100px 80px; }
 
