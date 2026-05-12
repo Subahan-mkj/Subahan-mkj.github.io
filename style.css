@@ -69,6 +69,7 @@ section { padding: 100px 80px; }
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 10px;
 }
 
 .badge {
@@ -195,9 +196,30 @@ section { padding: 100px 80px; }
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-    section { padding: 60px 20px; }
-    .hero { flex-direction: column; text-align: center; }
-    .navbar { padding: 20px; }
-    .nav-links { display: none; }
-    .media-gallery { grid-template-columns: 1fr; }
+
+    section {
+        padding: 60px 20px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar {
+        padding: 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .media-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .user-info{
+        display:none;
+    }
+
 }
