@@ -4,160 +4,244 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subahan J | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <nav>
+    <!-- CURSOR -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
 
-        
-        <div class="user-info">
+    <!-- NOISE OVERLAY -->
+    <div class="noise"></div>
 
-            <span id="location">
-            Loading location...
-            </span>
-
-            <span id="time">
-            Loading time...
-            </span>
-
+    <!-- NAV -->
+    <nav id="navbar">
+        <div class="nav-left">
+            <span class="nav-name">SJ</span>
+            <div class="nav-status">
+                <span class="status-dot"></span>
+                <span id="location">Locating...</span>
+            </div>
         </div>
-
-        <ul class="wp">
-
+        <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#work">Work</a></li>
             <li><a href="#contact">Contact</a></li>
-
         </ul>
-
+        <div class="nav-right">
+            <span id="time" class="nav-time">00:00:00</span>
+        </div>
     </nav>
 
     <main>
-        <!-- HERO SECTION -->
-        <section class="hero">
-            <div class="hero-content">
-                <h3 class="badge">Frontend Developer & UI Designer</h3>
-                <h1>SUBAHAN J</h1>
-                <p>Passionate IT student focused on building modern, responsive, and user-friendly websites.</p>
-                <a href="#projects" class="btn">View Projects</a>
-            </div>
-            <div class="hero-image">
-                <div class="image-glow"></div>
-                <img src="images/profile.png" alt="Subahan J Profile">
+
+        <!-- HERO -->
+        <section class="hero" id="hero">
+            <div class="hero-bg-text">SUBAHAN</div>
+            <div class="hero-inner">
+                <div class="hero-left">
+                    <div class="hero-tag">
+                        <span class="tag-dot"></span>
+                        Frontend Developer & UI Designer
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="line">SUBAHAN</span>
+                        <span class="line accent-line">J<span class="dot-accent">.</span></span>
+                    </h1>
+                    <p class="hero-desc">Crafting modern, responsive and pixel-perfect web experiences powered by clean code and creative vision.</p>
+                    <div class="hero-ctas">
+                        <a href="#projects" class="btn-primary">View Projects <span class="arrow">→</span></a>
+                        <a href="#contact" class="btn-outline">Hire Me</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-num">2+</span>
+                            <span class="stat-label">Years Exp.</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat">
+                            <span class="stat-num">10+</span>
+                            <span class="stat-label">Projects Done</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat">
+                            <span class="stat-num">5+</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <div class="profile-frame">
+                        <div class="profile-ring ring-1"></div>
+                        <div class="profile-ring ring-2"></div>
+                        <div class="profile-img-wrap">
+                            <img src="images/profile.png" alt="Subahan J" class="profile-img">
+                        </div>
+                        <div class="badge-float badge-top">
+                            <span>✦</span> UI/UX Design
+                        </div>
+                        <div class="badge-float badge-bottom">
+                            <span>⚡</span> Frontend Dev
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- ABOUT -->
         <section id="about" class="about">
-            <h2>About Me</h2>
-            <div class="glass-card">
-                <p>I specialize in frontend development, UI/UX design, responsive websites, and AI-powered systems.</p>
+            <div class="section-label">01 — About</div>
+            <div class="about-inner">
+                <div class="about-left">
+                    <h2>Who I Am</h2>
+                    <p>I'm a passionate IT student and creative developer from India, specializing in building modern digital experiences that blend aesthetic beauty with technical precision.</p>
+                    <p>My work spans frontend development, UI/UX design, responsive web design, and AI-powered systems — always with a focus on clean, maintainable code and standout visuals.</p>
+                    <div class="skills-row">
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">UI/UX Design</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">AI Systems</span>
+                        <span class="skill-tag">Branding</span>
+                    </div>
+                </div>
+                <div class="about-right">
+                    <div class="about-card">
+                        <div class="about-card-icon">🎯</div>
+                        <h3>Frontend Focus</h3>
+                        <p>Responsive, pixel-perfect interfaces built for performance.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-card-icon">🎨</div>
+                        <h3>Creative Design</h3>
+                        <p>UI/UX that balances beauty with function and usability.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-card-icon">🤖</div>
+                        <h3>AI Integration</h3>
+                        <p>Building smart systems that automate and enhance workflows.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- PROJECTS -->
         <section id="projects" class="projects">
-            <h2>Featured Projects</h2>
+            <div class="section-label">02 — Projects</div>
+            <h2>Featured Work</h2>
             <div class="project-grid">
-                
-                <!-- Project Card 1 -->
-                <div class="project-card glass-card">
+
+                <div class="project-card" data-index="0">
                     <div class="project-slider">
-                        <button class="prev" onclick="changeSlide(-1, 0)">❮</button>
-                        <img class="slide active project0" src="images/project1-1.png">
-                        <img class="slide project0" src="images/project1-2.png">
-                        <img class="slide project0" src="images/project1-3.png">
-                        <img class="slide project0" src="images/project1-4.png">
-                        <img class="slide project0" src="images/project1-5.png">
-                        <button class="next" onclick="changeSlide(1, 0)">❯</button>
+                        <div class="slides-wrapper" id="slides-0">
+                            <img class="slide" src="images/project1-1.png" alt="Smart Print AI slide 1">
+                            <img class="slide" src="images/project1-2.png" alt="Smart Print AI slide 2">
+                            <img class="slide" src="images/project1-3.png" alt="Smart Print AI slide 3">
+                            <img class="slide" src="images/project1-4.png" alt="Smart Print AI slide 4">
+                            <img class="slide" src="images/project1-5.png" alt="Smart Print AI slide 5">
+                        </div>
+                        <div class="slider-controls">
+                            <button class="ctrl prev" onclick="changeSlide(-1, 0)" aria-label="Previous">‹</button>
+                            <div class="slide-dots" id="dots-0"></div>
+                            <button class="ctrl next" onclick="changeSlide(1, 0)" aria-label="Next">›</button>
+                        </div>
                     </div>
-                    <h3>Smart Print AI</h3>
-                    <p>AI-powered printing management system.</p>
+                    <div class="project-info">
+                        <span class="project-num">01</span>
+                        <div>
+                            <h3>Smart Print AI</h3>
+                            <p>AI-powered printing management system with intelligent queue management and automation.</p>
+                        </div>
+                        <div class="project-tags">
+                            <span>AI</span><span>Web App</span><span>Automation</span>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Project Card 2 -->
-                <div class="project-card glass-card">
+                <div class="project-card" data-index="1">
                     <div class="project-slider">
-                        <button class="prev" onclick="changeSlide(-1, 1)">❮</button>
-                        <img class="slide active project1" src="images/project2-1.jpeg">
-                        <img class="slide project1" src="images/project2-2.jpeg">
-                        <img class="slide project1" src="images/project2-3.jpeg">
-                        <img class="slide project1" src="images/project2-4.jpeg">
-                        <img class="slide project1" src="images/project2-5.jpeg">
-                        <button class="next" onclick="changeSlide(1, 1)">❯</button>
+                        <div class="slides-wrapper" id="slides-1">
+                            <img class="slide" src="images/project2-1.jpeg" alt="Media Branding slide 1">
+                            <img class="slide" src="images/project2-2.jpeg" alt="Media Branding slide 2">
+                            <img class="slide" src="images/project2-3.jpeg" alt="Media Branding slide 3">
+                            <img class="slide" src="images/project2-4.jpeg" alt="Media Branding slide 4">
+                            <img class="slide" src="images/project2-5.jpeg" alt="Media Branding slide 5">
+                        </div>
+                        <div class="slider-controls">
+                            <button class="ctrl prev" onclick="changeSlide(-1, 1)" aria-label="Previous">‹</button>
+                            <div class="slide-dots" id="dots-1"></div>
+                            <button class="ctrl next" onclick="changeSlide(1, 1)" aria-label="Next">›</button>
+                        </div>
                     </div>
-                    <h3>Media Branding</h3>
-                    <p>Creative branding and social media management.</p>
+                    <div class="project-info">
+                        <span class="project-num">02</span>
+                        <div>
+                            <h3>Media Branding</h3>
+                            <p>Creative branding identity and social media management for growing businesses.</p>
+                        </div>
+                        <div class="project-tags">
+                            <span>Branding</span><span>Social Media</span><span>Design</span>
+                        </div>
+                    </div>
                 </div>
 
             </div>
         </section>
 
-        <!-- MEDIA WORK -->
+        <!-- GALLERY -->
         <section class="media" id="work">
-
-            <h2>Branding Gallery</h2>
-
-            <div class="slider-track">
-
-                <div class="gallery-slide">
-                    <img src="images/imagesmedia1.jpg">
+            <div class="section-label">03 — Branding Gallery</div>
+            <h2>Visual Work</h2>
+            <div class="marquee-wrap">
+                <div class="marquee-track" id="marquee">
+                    <div class="gslide"><img src="images/imagesmedia1.jpg" alt="Gallery 1"></div>
+                    <div class="gslide"><img src="images/imagesmedia2.png" alt="Gallery 2"></div>
+                    <div class="gslide"><img src="images/imagesmedia3.jpg" alt="Gallery 3"></div>
+                    <div class="gslide"><img src="images/imagesmedia4.jpg" alt="Gallery 4"></div>
+                    <div class="gslide"><img src="images/imagesmedia5.jpg" alt="Gallery 5"></div>
+                    <div class="gslide"><img src="images/imagesmedia1.jpg" alt="Gallery 1 dup"></div>
+                    <div class="gslide"><img src="images/imagesmedia2.png" alt="Gallery 2 dup"></div>
+                    <div class="gslide"><img src="images/imagesmedia3.jpg" alt="Gallery 3 dup"></div>
+                    <div class="gslide"><img src="images/imagesmedia4.jpg" alt="Gallery 4 dup"></div>
+                    <div class="gslide"><img src="images/imagesmedia5.jpg" alt="Gallery 5 dup"></div>
                 </div>
-
-                <div class="gallery-slide">
-                    <img src="images/imagesmedia2.png">
-                </div>
-
-                <div class="gallery-slide">
-                    <img src="images/imagesmedia3.jpg">
-                </div>
-
-                <div class="gallery-slide">
-                    <img src="images/imagesmedia4.jpg">
-                </div>
-
-                <div class="gallery-slide">
-                    <img src="images/imagesmedia5.jpg">
-                </div>
-
-                <!-- DUPLICATE FOR LOOP -->
-
-                <div class="gallery-slide">
-                    <img src="images/imagesmedia1.png">
-                </div>
-
-                <div class="gallery-slide">
-                    <img src="images/imagesmedia2.png">
-                </div>
-
-                <div class="gallery-slide">
-                    <img src="images/imagesmedia3.png">
-                </div>
-
-                <div class="gallery-slide">
-                    <img src="images/imagesmedia4.png">
-                </div>
-
-                <div class="gallery-slide">
-                    <img src="images/imagesmedia5.jpg">
-                </div>
-
             </div>
-
         </section>
 
         <!-- CONTACT -->
         <section id="contact" class="contact">
-            <div class="contact-box glass-card">
-                <h2>Let's Connect</h2>
-                <p>Have a project in mind?</p>
-                <a href="mailto:mkj.subahan66@gmail.com" class="btn">Email Me</a>
+            <div class="section-label">04 — Contact</div>
+            <div class="contact-inner">
+                <div class="contact-left">
+                    <h2>Let's Build<br>Something<br><span class="accent">Great.</span></h2>
+                    <p>Have a project in mind? Let's collaborate and create something extraordinary together.</p>
+                </div>
+                <div class="contact-right">
+                    <a href="mailto:mkj.subahan66@gmail.com" class="contact-link">
+                        <span class="contact-icon">✉</span>
+                        <span>mkj.subahan66@gmail.com</span>
+                        <span class="contact-arrow">→</span>
+                    </a>
+                    <div class="contact-socials">
+                        <a href="#" class="social-pill">GitHub</a>
+                        <a href="#" class="social-pill">LinkedIn</a>
+                        <a href="#" class="social-pill">Dribbble</a>
+                    </div>
+                </div>
             </div>
         </section>
+
     </main>
+
+    <footer>
+        <span>© 2025 Subahan J — Crafted with passion</span>
+        <span class="footer-dot">✦</span>
+        <span>Frontend Developer & UI Designer</span>
+    </footer>
 
     <script src="script.js"></script>
 </body>
