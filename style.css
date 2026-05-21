@@ -782,7 +782,8 @@ nav.scrolled { padding: 14px 60px; }
 
 @media (max-width: 480px) {
     .brands-grid { grid-template-columns: repeat(4, 1fr); gap: 10px; }
-    .brand-card-circle { width: 70px; hei
+    .brand-card-circle { width: 70px; height: 70px; padding: 8px; }
+}
 
 /* ===== CONTACT ===== */
 .contact {
