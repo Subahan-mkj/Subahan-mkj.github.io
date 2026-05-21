@@ -716,23 +716,31 @@ nav.scrolled { padding: 14px 60px; }
 .brands-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 28px;
 }
 
 .brand-card {
-    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-card-circle {
+    width: 120px;
+    height: 120px;
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: var(--radius);
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: border-color 0.3s, transform 0.3s;
     position: relative;
     overflow: hidden;
+    padding: 14px;
 }
 
-.brand-card::before {
+.brand-card-circle::before {
     content: '';
     position: absolute;
     inset: 0;
@@ -741,19 +749,18 @@ nav.scrolled { padding: 14px 60px; }
     transition: opacity 0.3s;
 }
 
-.brand-card:hover {
-    border-color: rgba(200,255,0,0.25);
-    transform: translateY(-3px);
+.brand-card:hover .brand-card-circle {
+    border-color: rgba(200,255,0,0.35);
+    transform: translateY(-4px);
 }
 
-.brand-card:hover::before { opacity: 1; }
+.brand-card:hover .brand-card-circle::before { opacity: 1; }
 
-.brand-card img {
-    max-width: 130px;
-    max-height: 55px;
-    width: auto;
-    height: auto;
-    object-fit: contain;
+.brand-card-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
     filter: grayscale(100%) brightness(0.7);
     opacity: 0.6;
     transition: filter 0.3s, opacity 0.3s, transform 0.3s;
@@ -761,21 +768,21 @@ nav.scrolled { padding: 14px 60px; }
     z-index: 1;
 }
 
-.brand-card:hover img {
+.brand-card:hover .brand-card-circle img {
     filter: grayscale(0%) brightness(1);
     opacity: 1;
-    transform: scale(1.06);
+    transform: scale(1.08);
 }
 
 @media (max-width: 900px) {
     .brands { padding: 80px 24px; }
-    .brands-grid { grid-template-columns: repeat(2, 1fr); }
+    .brands-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .brand-card-circle { width: 90px; height: 90px; padding: 10px; }
 }
 
 @media (max-width: 480px) {
-    .brands-grid { grid-template-columns: repeat(2, 1fr); }
-    .brand-card { height: 100px; }
-}
+    .brands-grid { grid-template-columns: repeat(4, 1fr); gap: 10px; }
+    .brand-card-circle { width: 70px; hei
 
 /* ===== CONTACT ===== */
 .contact {
