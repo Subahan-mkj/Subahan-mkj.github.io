@@ -59,7 +59,7 @@ function initDots() {
 function updateSlider(idx) {
     const wrapper = document.getElementById('slides-' + idx);
     if (wrapper) {
-        wrapper.style.transform = `translateX(-${currentSlides[idx] * 100}%)`;
+        wrapper.style.transform = `translateX(-${currentSlides[idx] * 20}%)`;
     }
     const dots = document.querySelectorAll(`#dots-${idx} .dot`);
     dots.forEach((d, i) => d.classList.toggle('active', i === currentSlides[idx]));
