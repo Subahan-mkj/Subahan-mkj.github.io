@@ -523,9 +523,18 @@ nav.scrolled { padding: 14px 60px; }
 .project-slider {
     position: relative;
     width: 100%;
-    aspect-ratio: 16/10;
+    height: 350px;
     overflow: hidden;
-    background: var(--surface2);
+    background: #111;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    flex-shrink: 0;
 }
 
 .slides-wrapper {
@@ -535,14 +544,6 @@ nav.scrolled { padding: 14px 60px; }
     transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
 }
 
-.slide {
-    min-width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    flex-shrink: 0;
-}
 
 .slider-controls {
     position: absolute;
