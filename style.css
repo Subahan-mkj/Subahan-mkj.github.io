@@ -744,7 +744,7 @@ nav.scrolled { padding: 14px 60px; }
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at 50% 120%, rgba(200,255,0,0.06), transparent 70%);
+    background: radial-gradient(circle at 50% 120%, rgba(200,255,0,0.08), transparent 70%);
     opacity: 0;
     transition: opacity 0.3s;
 }
@@ -844,6 +844,15 @@ nav.scrolled { padding: 14px 60px; }
     border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
     flex-shrink: 0;
+}
+
+.linkedin-icon {
+    font-size: 14px;
+    font-weight: 800;
+    font-family: var(--font-display);
+    background: rgba(0, 119, 181, 0.15);
+    color: #0a9fd4;
+    letter-spacing: -0.5px;
 }
 
 .contact-arrow { margin-left: auto; color: var(--muted); transition: transform 0.2s; }
