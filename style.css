@@ -932,3 +932,11 @@ footer {
     .profile-frame { width: 200px; height: 250px; }
     .profile-img-wrap { width: 180px; height: 220px; border-radius: 90px; }
 }
+@media (max-width: 900px) {
+    .cursor, .cursor-dot {
+        display: none;
+    }
+    body {
+        cursor: auto;
+    }
+}

@@ -102,3 +102,12 @@ window.onload = () => {
     initDots();
     startAutoSlide();
 };
+// Only run cursor on non-touch devices
+if (window.matchMedia('(pointer: fine)').matches) {
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+        cursorDot.style.left = e.clientX + 'px';
+        cursorDot.style.top = e.clientY + 'px';
+    });
+}
