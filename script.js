@@ -2,13 +2,47 @@
 const cursor = document.getElementById('cursor');
 const cursorDot = document.getElementById('cursorDot');
 
+// shared move function
+function moveCursor(x, y) {
+    cursor.style.left = x + 'px';
+    cursor.style.top  = y + 'px';
+    cursorDot.style.left = x + 'px';
+    cursorDot.style.top  = y + 'px';
+}
+
+// DESKTOP — mouse
 document.addEventListener('mousemove', (e) => {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
-    cursorDot.style.left = e.clientX + 'px';
-    cursorDot.style.top = e.clientY + 'px';
+    cursor.style.opacity = '1';
+    cursorDot.style.opacity = '1';
+    moveCursor(e.clientX, e.clientY);
 });
 
+// MOBILE — touch
+document.addEventListener('touchstart', (e) => {
+    cursor.style.opacity = '1';
+    cursorDot.style.opacity = '1';
+    cursor.style.transition = 'none';
+    cursorDot.style.transition = 'none';
+    moveCursor(e.touches[0].clientX, e.touches[0].clientY);
+}, { passive: true });
+
+document.addEventListener('touchmove', (e) => {
+    moveCursor(e.touches[0].clientX, e.touches[0].clientY);
+}, { passive: true });
+
+document.addEventListener('touchend', () => {
+    // shrink + fade out after finger lifts
+    cursor.style.transition = 'transform 0.3s ease, opacity 0.4s ease';
+    cursorDot.style.transition = 'opacity 0.4s ease';
+    cursor.style.transform = 'translate(-50%,-50%) scale(0.5)';
+    setTimeout(() => {
+        cursor.style.opacity = '0';
+        cursorDot.style.opacity = '0';
+        cursor.style.transform = 'translate(-50%,-50%) scale(1)';
+    }, 300);
+});
+
+// scale on hover / tap
 document.querySelectorAll('a, button, .project-card, .about-card').forEach(el => {
     el.addEventListener('mouseenter', () => cursor.style.transform = 'translate(-50%,-50%) scale(1.8)');
     el.addEventListener('mouseleave', () => cursor.style.transform = 'translate(-50%,-50%) scale(1)');
@@ -102,12 +136,3 @@ window.onload = () => {
     initDots();
     startAutoSlide();
 };
-// Only run cursor on non-touch devices
-if (window.matchMedia('(pointer: fine)').matches) {
-    document.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-        cursorDot.style.left = e.clientX + 'px';
-        cursorDot.style.top = e.clientY + 'px';
-    });
-}

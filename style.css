@@ -42,6 +42,7 @@ body {
     z-index: 9999;
     transition: transform 0.15s ease, opacity 0.2s;
     transform: translate(-50%, -50%);
+    opacity: 0;
 }
 
 .cursor-dot {
@@ -52,6 +53,7 @@ body {
     pointer-events: none;
     z-index: 9999;
     transform: translate(-50%, -50%);
+    opacity: 0;
 }
 
 /* ===== NOISE TEXTURE ===== */
@@ -663,7 +665,7 @@ nav.scrolled { padding: 14px 60px; }
     display: flex;
     gap: 20px;
     width: max-content;
-    animation: marquee 25s linear infinite;
+    animation: marquee 40s linear infinite;
 }
 
 .marquee-track:hover { animation-play-state: paused; }
@@ -931,12 +933,4 @@ footer {
     .hero-title { font-size: 46px; letter-spacing: -2px; }
     .profile-frame { width: 200px; height: 250px; }
     .profile-img-wrap { width: 180px; height: 220px; border-radius: 90px; }
-}
-@media (max-width: 900px) {
-    .cursor, .cursor-dot {
-        display: none;
-    }
-    body {
-        cursor: auto;
-    }
 }
