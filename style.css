@@ -934,3 +934,66 @@ footer {
     .profile-frame { width: 200px; height: 250px; }
     .profile-img-wrap { width: 180px; height: 220px; border-radius: 90px; }
 }
+.resume-btn{
+    border-color: rgba(200,255,0,0.3);
+}
+
+.resume-btn:hover{
+    border-color: var(--accent);
+    color: var(--accent);
+}
+/* SOFTWARE MARQUEE */
+
+.software-section{
+    padding:120px 0;
+    border-top:1px solid var(--border);
+    overflow:hidden;
+}
+
+.software-section .section-label,
+.software-section h2{
+    padding-left:60px;
+}
+
+.software-section h2{
+    font-family:var(--font-display);
+    font-size:clamp(32px,5vw,52px);
+    margin-bottom:40px;
+}
+
+.software-marquee{
+    overflow:hidden;
+    position:relative;
+}
+
+.software-track{
+    display:flex;
+    align-items:center;
+    gap:60px;
+    width:max-content;
+    animation:softwareScroll 25s linear infinite;
+}
+
+.software-track img{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+    filter:grayscale(100%);
+    opacity:.7;
+    transition:.3s;
+}
+
+.software-track img:hover{
+    filter:none;
+    opacity:1;
+    transform:scale(1.15);
+}
+
+@keyframes softwareScroll{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-50%);
+    }
+}
