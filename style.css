@@ -970,6 +970,7 @@ footer {
     display:flex;
     align-items:center;
     gap:60px;
+    border-radius: 50%;
     width:max-content;
     animation:softwareScroll 25s linear infinite;
 }
@@ -977,6 +978,7 @@ footer {
 .software-track img{
     width:70px;
     height:70px;
+    border-radius: 50%;
     object-fit:contain;
     filter:grayscale(100%);
     opacity:.7;
