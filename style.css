@@ -978,7 +978,7 @@ footer {
 .software-track img{
     width:70px;
     height:70px;
-    border-radius: 50%;
+   
     object-fit:contain;
     filter:grayscale(100%);
     opacity:.7;
